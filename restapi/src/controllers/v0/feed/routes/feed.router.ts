@@ -35,8 +35,17 @@ router.get('/:id', async (req: Request, res: Response) => {
 router.patch('/:id', 
     requireAuth, 
     async (req: Request, res: Response) => {
-        //@TODO try it yourself
-        res.send(500).send("not implemented")
+        let { id } = req.params;
+        FeedItem.update(
+            req.body, 
+            {where: {id: id}}
+        )
+        .then(result => {
+            res.send("Successfully updated item with id: " + id);
+        })
+        .catch(error => {
+            res.status(400).send("Error updating the data");
+        })
 });
 
 
