@@ -2,6 +2,9 @@
 
 A Node-Express application which runs a simple script to process images.
 
+Elastic Beanstalk URL: http://udagram-image-filter-dev.us-east-1.elasticbeanstalk.com/
+Filter image endpoint: http://udagram-image-filter-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=<>
+
 ## Tasks
 
 ### Setup Node Environment
